@@ -2,6 +2,6 @@
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">{{ character.name }}</h5>
     </div>
-    <button type="button" class="btn btn-primary mr-1">Light</button>
-    <button type="button" class="btn btn-danger">Dark</button>
+    <button class="btn btn-primary mr-1" (click)="onAssign('light')">Light</button>
+    <button class="btn btn-danger" (click)="onAssign('dark')">Dark</button>
   </a>
