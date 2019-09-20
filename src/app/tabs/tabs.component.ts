@@ -5,7 +5,6 @@ import { StarWarsService } from '../star-wars.service';
   selector: 'app-tabs',
   templateUrl: './tabs.component.html',
   styleUrls: ['./tabs.component.scss'],
-  providers: [StarWarsService]
 })
 export class TabsComponent implements OnInit {
 
