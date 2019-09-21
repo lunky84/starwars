@@ -10,6 +10,15 @@ import { ItemComponent } from './item/item.component';
 import { StarWarsService } from './star-wars.service';
 import { LogService } from './log.service';
 import { CreateCharacterComponent } from './create-character/create-character.component';
+import { HeaderComponent } from './header/header.component';
+import { RouterModule } from '@angular/router';
+
+const routes = [
+  {path: '', component: TabsComponent},
+  {path: 'new-character', component: CreateCharacterComponent},
+  {path: '**', redirectTo: '/'}
+];
+
 
 @NgModule({
   declarations: [
@@ -17,12 +26,14 @@ import { CreateCharacterComponent } from './create-character/create-character.co
     TabsComponent,
     ListComponent,
     ItemComponent,
-    CreateCharacterComponent
+    CreateCharacterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [StarWarsService, LogService],
   bootstrap: [AppComponent]
